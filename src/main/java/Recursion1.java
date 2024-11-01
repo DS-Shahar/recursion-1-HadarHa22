@@ -34,19 +34,19 @@ public class Recursion1 {
 	}
 	
 	// q4
-	public static int count(int n, int counter) {
-		if (n==0) {
-			return counter;
+	public static int count(int n) {
+		if (n<10) {
+			return 1;
 		}
-		return count(n/10,counter+1);
+		return 1+count(n/10);
 	}
 	
 	//q5
-	public static int div(int a, int b, int count) {
+	public static int div(int a, int b) {
 		if(a<b) {
-			return count;
+			return 0;
 		}
-		return div(a-b,b,count);
+		return 1+div(a-b,b);
 	}
 	
 	// q6
