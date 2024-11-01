@@ -3,7 +3,8 @@ public class Recursion1 {
 	static Scanner input = new Scanner(System.in);
 	public static void main(String[] args) {
 		
-		//System.out.println(*enter name of method*(num));;
+		//System.out.println(*enter name of method*(num));
+		System.out.println(isPrime(10,2));
 	}
 	
 	// q1
@@ -66,6 +67,21 @@ public class Recursion1 {
 			return false;}
 		return isKfo(x-y,y);
 	}
+	
+	// q8
+	public static boolean isPrime(int n, int d) {
+		if (n<=1) {
+			return false;
+		}
+		if (d>Math.sqrt(n)) {
+			return true;
+		}
+		if (n%d==0) {
+			return false;
+		}
+		return isPrime(n,d+1);
+	}
+	
 	
 	
 	
